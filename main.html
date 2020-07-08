@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+        function playRound(playerSelection, computerSelection) {
+            playerSelection = playerSelection.toLowerCase();
+            computerSelection = computerSelection.toLowerCase();
+            
+            switch(playerSelection) {
+                case 'rock':
+                    if (computerSelection === 'scissors') {
+                        return 'You Win! Rock beats Scissors'
+                    } else if (computerSelection === 'paper') {
+                        return 'You Lose! Paper beats Rock'
+                    } else {
+                        return 'This was a tie! Rock vs Rock'
+                    }
+                    break;
+
+                case 'scissors':
+                    if (computerSelection === 'paper') {
+                        return 'You Win! Scissors beats Paper'
+                    } else if (computerSelection === 'rock') {
+                        return 'You Lose! Rock beats Scissors'
+                    } else {
+                        return 'This was a tie! Scissors vs Scissors'
+                    }
+                    break;
+
+                case 'paper':
+                if (computerSelection === 'rock') {
+                        return 'You Win! Paper beats Rock'
+                    } else if (computerSelection === 'scissors') {
+                        return 'You Lose! Scissors beats Paper'
+                    } else {
+                        return 'This was a tie! Paper vs Paper'
+                    }
+                    break;
+            }
+        }
+
+        function computerPlay() {
+            let choices = ['rock', 'paper', 'scissors'];
+
+            return choices[Math.floor(Math.random()*choices.length)];
+        }
+        
+        const playerSelection = 'rOcK';
+        const computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
+    </script>
+  </head>
+  <body>
+    <main id="main">
+    <footer></footer>
+    </main>
+  </body>
+</html>
