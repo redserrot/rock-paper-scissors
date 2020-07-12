@@ -1,75 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>
-        function playRound(playerSelection, computerSelection) {
-            
-            switch(playerSelection) {
-                case 'rock':
-                    if (computerSelection === 'scissors') {
-                        return 'You Win! Rock beats Scissors'
-                    } else if (computerSelection === 'paper') {
-                        return 'You Lose! Paper beats Rock'
-                    } else {
-                        return 'This was a tie! Rock vs Rock'
-                    }
-                    break;
-
-                case 'scissors':
-                    if (computerSelection === 'paper') {
-                        return 'You Win! Scissors beats Paper'
-                    } else if (computerSelection === 'rock') {
-                        return 'You Lose! Rock beats Scissors'
-                    } else {
-                        return 'This was a tie! Scissors vs Scissors'
-                    }
-                    break;
-
-                case 'paper':
-                if (computerSelection === 'rock') {
-                        return 'You Win! Paper beats Rock'
-                    } else if (computerSelection === 'scissors') {
-                        return 'You Lose! Scissors beats Paper'
-                    } else {
-                        return 'This was a tie! Paper vs Paper'
-                    }
-                    break;
-            }
-        }
-
-        function computerPlay() {
-            let choices = ['rock', 'paper', 'scissors'];
-
-            return choices[Math.floor(Math.random()*choices.length)];
-        }
-        
-        function game() {
-            let playerScore = 0;
-            let computerScore = 0;
-
-            for (let numOfGames = 1; numOfGames < 6; numOfGames++) {
-                const playerSelection = prompt('Rock, Paper or Scissors?', 'rock').toLowerCase;
-                const computerSelection = computerPlay().toLowerCase;
-
-                let result = `Game Number: ${numOfGames} - ${playRound(playerSelection, computerSelection)}`;
-                if(result.indexOf('You Win!') > 0) {
-                    playerScore = ++playerScore;
-                } else if (result.indexOf('You Lose!') > 0){
-                    computerScore = ++computerScore;
-                }
-                console.log(result);                
-            }
-            console.log(`Final Score is:
-                        Player got ${playerScore}
-                        Computer got ${computerScore}`);
-        }
- 
-        game();
+    <script type="text/javascript" src="scripts/index.js">
 
     </script>
   </head>
   <body>
     <main id="main">
+        <script>
+            game();
+        </script>
+    </main>
     <footer></footer>
     </main>
   </body>
