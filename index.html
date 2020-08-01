@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="scripts/index.js">
-
-    </script>
+    <script type='text/javascript' src='scripts/index.js'></script>
+    <link rel='stylesheet' type='text/css' href='css/index.css'>
   </head>
   <body>
-    <main id="main">
-        <script>
-            game();
-        </script>
+    <main id='main'>
+        <div id='left-game-panel'>
+            <div id='choices-section'>
+                <button id='rock'>Choose Rock</button>
+                <button id='paper'>Choose Paper</button>
+                <button id='scissors'>Choose Scissors</button>
+            </div>
+            <div id='result-section'>
+            </div>
+        </div>
+        <div id='right-game-panel'> 
+        </div>
+        <footer></footer>
     </main>
-    <footer></footer>
-    </main>
+    <script>
+      setupGame();
+  </script>
   </body>
 </html>
